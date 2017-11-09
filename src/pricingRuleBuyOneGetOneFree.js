@@ -3,11 +3,6 @@ const BigNumber = require("bignumber.js");
 const Item = require("./item.js");
 const PricingRule = require("./pricingRule.js");
 
-BigNumber.config({
-    DECIMAL_PLACES: 2,
-    ROUNDING_MODE: BigNumber.ROUND_HALF_EVEN, // HALF_EVEN for discounts
-});
-
 function PricingRuleBuyOneGetOneFree(spec) {
     PricingRule.call(this, spec);
 }
